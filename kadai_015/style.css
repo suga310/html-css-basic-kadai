@@ -1,0 +1,31 @@
+/* フォントの種類 */
+body{
+    font-family: "Arial","Meiryo",sans-serif;
+    text-align: center;
+}
+
+/* フォントサイズ */
+html{
+    font-size: 20px;
+}
+
+/* フォントの装飾 */
+h1{
+    font-family: "Josefin sans",sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1.2em;
+    text-shadow: 1px 1px 2px gray;
+    border-bottom: solid 3px rgb(115,115,114);
+}
+
+/* フォントカラー */
+.blue{
+    color: skyblue;
+}
+.pink{
+    color: rgb(255, 192, 203);
+}
+/* 子要素の文字を太字にする */
+#basic p{
+    font-weight: bolder;
+}
