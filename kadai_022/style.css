@@ -1,0 +1,101 @@
+h1,p,body{
+    margin: o;
+}
+
+p,a{
+    font-size: 20px;
+}
+h1{
+    color: rgb(255,255,255);
+}
+
+header{
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+/* main要素内の余白を取る */
+main{
+    margin: 10px;
+}
+/* コンテナに設定する。
+一番左と一番右のアイテムも含め、均等な間隔で配置する値を設定
+ */
+#parent{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.contents{
+    border: 3px solid rgb(238,204,204);
+    /* ↓幅の初期サイズを指定 */
+    flex-basis: 25%;
+    padding: 10px 15px;
+    margin: 20px 0;
+}
+/* メインコンテンツ内のテキストを中央揃え */
+.contents h2,.contents p{
+    text-align: center;
+
+}
+/* メインコンテンツのp要素の段落間の余白をなくす */
+.contents p{
+    margin: 0;
+    padding: 0
+    ;
+}
+/* img要素の中央揃えはdiplay:blockを使用 */
+.contents img{
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+}
+
+/* 東京の天気の部分のフォントサイズと点線 */
+h2{
+    font-size: 25px;
+    border-bottom: 3px dotted rgb(236, 122, 122) ;
+}
+/* h２見出しの前にちょぼをつける */
+h2::before{
+    content: "●";
+    color: rgb(239, 111, 139);
+}
+
+/* class名contents内の二番目のp要素内のテキストの中で
+一番目の文字にのみスタイル設定 */
+p:nth-of-type(2)::first-letter{
+    font-weight: bold;
+    color: rgb(97,206,249);
+}
+
+footer{
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+/* 未訪問のリンク */
+a:link{
+    color: rgb(255,255,255);
+
+}
+/* 訪問済みのリンク */
+a:visited{
+    color: rgb(193, 234, 251);
+}
+/* マウスがカーソルに乗っている時の状態 */
+a:hover{
+    color: rgb(245,178,168);
+}
+/* 画面幅が768px以下になったときに以下の設定に変更 */
+@media screen and (max-width: 768px){
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 25px;
+    }
+    #parent{
+        display: block;
+    }
+}
